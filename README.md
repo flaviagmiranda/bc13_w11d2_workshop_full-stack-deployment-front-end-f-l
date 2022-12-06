@@ -1,4 +1,4 @@
-# Shopping List Frontend For Practicing Deployment
+# Shopping List Frontend For Practicing Deployment.
 
 Note: Have your back end deployed from the other repo first so that you have your API URL ready to provide as an environment variable for your front end.
 
