@@ -55,7 +55,7 @@ function App() {
     });
     
     if (!response.ok) {
-      return alert("Failed to add item, please try again later.");
+      return alert("Failed to delete the items, please try again later.");
     }
 
     const clearedList = [];
@@ -70,7 +70,7 @@ function App() {
     });
 
     if (!response.ok) {
-      return alert("Failed to add item, please try again later.");
+      return alert("Failed to edit item, please try again later.");
     }
 
     setList((previous) => {
