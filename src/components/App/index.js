@@ -54,7 +54,17 @@ function App() {
     setList(clearedList);
   }
 
-  function tickItem(idOfTickedItem) {
+  async function tickItem(idOfTickedItem) {
+
+    const response = await fetch(`${url}/items/${idOfTickedItem}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" }
+    });
+
+    if (!response.ok) {
+      return alert("Failed to add item, please try again later.");
+    }
+    
     setList((previous) => {
       return previous.map((item) => {
         return item.id !== idOfTickedItem
