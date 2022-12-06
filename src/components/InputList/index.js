@@ -22,7 +22,7 @@ function InputList({ addToList, buttonText }) {
 
   return (
     <section>
-      <input value={input} onChange={handleInput} />
+      <input value={input} onChange={handleInput} maxlength="30" />
       <button className="InputList" onClick={handleClick}>
         {buttonText}
       </button>
