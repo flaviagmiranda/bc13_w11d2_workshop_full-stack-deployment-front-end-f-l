@@ -18,7 +18,6 @@ function App() {
     async function getShoppingList() {
       const response = await fetch(`${url}/items`);
       const data = await response.json(response);
-      console.log(data);
       setList(data.payload);
     }
     getShoppingList();
@@ -73,7 +72,7 @@ function App() {
     if (!response.ok) {
       return alert("Failed to add item, please try again later.");
     }
-    
+
     setList((previous) => {
       return previous.map((item) => {
         return item.id !== idOfTickedItem
